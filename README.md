@@ -14,5 +14,5 @@ The autocomplete is a bit of a hassle to install since the [plugin](https://gith
 The last addition I added was the autoclose. This plugin closes all parentheses automatically making this configuration in my eyes an exelent competitor against modern day text editors and IDE's.
 
 > [!NOTE]
-> Lastly I should mention that I only use neovim on a Windows Subsystem for Linux or shortly [wsl](https://learn.microsoft.com/en-us/windows/wsl/install)
+> Lastly I should mention that I only use neovim on a Windows Subsystem for Linux or shortly [wsl](https://learn.microsoft.com/en-us/windows/wsl/install).
 You can install this simply in a windows terminal (I personally use PowerShell) by typing 'wsl --install'.
