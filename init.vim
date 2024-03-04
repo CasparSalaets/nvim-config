@@ -24,7 +24,7 @@ Plug 'https://github.com/itmammoth/doorboy.vim' " autoclose
 
 call plug#end()
 
-:colorscheme afterglow "sonokai, jellybeans
+:colorscheme afterglow 
 nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
