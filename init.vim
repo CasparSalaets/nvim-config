@@ -21,10 +21,20 @@ Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple c
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/itmammoth/doorboy.vim' " autoclose
+Plug 'ghifarit53/tokyonight-vim'
+
 
 call plug#end()
 
-:colorscheme afterglow 
+":colorscheme afterglow "sonokai, jellybeans
+
+
+set termguicolors
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+
 nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
