@@ -23,13 +23,12 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'arzg/vim-colors-xcode'
-
 call plug#end()
 
 
 " tokyonight colorscheme
 set termguicolors
-let g:tokyonight_style = 'night'
+let g:tokyonight_style = 'dark'
 let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
@@ -37,6 +36,8 @@ colorscheme tokyonight
 " xcode colorscheme
 " set termguicolors " nessecary for terminal use of colorscheme
 " colorscheme xcode
+
+set guicursor=n-vline
 
 :set completeopt-=preview " For No Previews
 
@@ -52,3 +53,4 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-R> :sp <CR> :term python3 % <CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
