@@ -22,7 +22,8 @@ All the plugins are installed using [vim plug](https://github.com/junegunn/vim-p
 - [tokyonight-colorscheme](ghifarit53/tokyonight-vim)
 - [coc.vim](https://github.com/neoclide/coc.nvim)
 - [xcode-colorscheme](arzg/vim-colors-xcode)
-
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+- [nvim-telescope](https://github.com/nvim-telescope/telescope.nvim)
 > [!NOTE]
 > Lastly I should mention that I only use neovim on a Windows Subsystem for Linux or shortly [wsl](https://learn.microsoft.com/en-us/windows/wsl/install).
-You can install this simply in a windows terminal (I personally use PowerShell) by typing 'wsl --install'. I use Ubuntu for the Linux system but any other should work just fine.
+You can install this simply in a windows terminal (I personally use PowerShell) by typing 'wsl --install'. I use kali for the Linux system but any other should work just fine.
