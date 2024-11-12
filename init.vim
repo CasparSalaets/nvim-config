@@ -19,23 +19,23 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/itmammoth/doorboy.vim' " autoclose
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'ghifarit53/tokyonight-vim' " tokyonight colorscheme
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
-Plug 'arzg/vim-colors-xcode'
+Plug 'arzg/vim-colors-xcode' " xcode colorscheme 
 call plug#end()
 
 
 " tokyonight colorscheme
-set termguicolors
-let g:tokyonight_style = 'dark'
-let g:tokyonight_enable_italic = 1
+" set termguicolors
+" let g:tokyonight_style = 'dark'
+" let g:tokyonight_enable_italic = 1
 
-colorscheme tokyonight
+" colorscheme tokyonight
 
 " xcode colorscheme
-" set termguicolors " nessecary for terminal use of colorscheme
-" colorscheme xcode
+set termguicolors " nessecary for terminal use of colorscheme
+colorscheme xcode
 
 set guicursor=n-vline
 
