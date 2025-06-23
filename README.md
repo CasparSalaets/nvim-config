@@ -1,29 +1,40 @@
-# nvim-config
+# Neovim Configuration
 
-## Vim support
-This config file is written in ```.vim``` and most of the plugins will therefore work in the regular Vim as well. Conquer of Completion is an exception to this.
+## Vim Compatibility
 
-> [!IMPORTANT]
-> Some plugins (like Conquer of Completion) will require additional plugins like pip3, nodejs, npm, etc. for them to work. A NerdFont will also be nessecary to display certain icons in the editor itself.
+This configuration is written in `.vim` syntax, so most of the plugins work seamlessly in standard Vim as well. However, one notable exception is **Conquer of Completion (CoC)**, which requires Neovim-specific functionality.
 
-## Installed plugins
-All the plugins are installed using [vim plug](https://github.com/junegunn/vim-plug).
+> **Important**  
+> Some plugins—such as CoC—depend on external tools like `pip3`, `nodejs`, and `npm`. To display icons correctly in the UI, a Nerd Font is also required.
 
-- [vim-surround](http://github.com/tpope/vim-surround)
-- [nerdtree](https://github.com/preservim/nerdtree)
-- [vim-commentary](https://github.com/tpope/vim-commentary)
-- [airline](https://github.com/vim-airline/vim-airline)
-- [vim-css-color](https://github.com/ap/vim-css-color)
-- [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)
-- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
-- [vim-terminal](https://github.com/tc50cal/vim-terminal)
-- [doorboy.vim](https://github.com/itmammoth/doorboy.vim)
-- [tagbar](https://github.com/preservim/tagbar)
-- [tokyonight-colorscheme](ghifarit53/tokyonight-vim)
-- [coc.vim](https://github.com/neoclide/coc.nvim)
-- [xcode-colorscheme](arzg/vim-colors-xcode)
-- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
-- [nvim-telescope](https://github.com/nvim-telescope/telescope.nvim)
-> [!NOTE]
-> Lastly I should mention that I only use neovim on a Windows Subsystem for Linux or shortly [wsl](https://learn.microsoft.com/en-us/windows/wsl/install).
-You can install this simply in a windows terminal (I personally use PowerShell) by typing 'wsl --install'. I use kali for the Linux system but any other should work just fine.
+## Plugin Management
+
+All plugins are managed using [vim-plug](https://github.com/junegunn/vim-plug).
+
+### Installed Plugins
+
+- [vim-surround](https://github.com/tpope/vim-surround)  
+- [nerdtree](https://github.com/preservim/nerdtree)  
+- [vim-commentary](https://github.com/tpope/vim-commentary)  
+- [vim-airline](https://github.com/vim-airline/vim-airline)  
+- [vim-css-color](https://github.com/ap/vim-css-color)  
+- [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)  
+- [vim-devicons](https://github.com/ryanoasis/vim-devicons)  
+- [vim-terminal](https://github.com/tc50cal/vim-terminal)  
+- [doorboy.vim](https://github.com/itmammoth/doorboy.vim)  
+- [tagbar](https://github.com/preservim/tagbar)  
+- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim)  
+- [coc.nvim](https://github.com/neoclide/coc.nvim)  
+- [vim-colors-xcode](https://github.com/arzg/vim-colors-xcode)  
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)  
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)  
+
+## Environment
+
+> **Note**  
+> I primarily use Neovim through the **Windows Subsystem for Linux (WSL)**.  
+> To install WSL, open a Windows terminal (I use PowerShell) and run:  
+> ```shell
+> wsl --install
+> ```  
+> My Linux distro of choice is **Kali**, though any other should work just fine.
