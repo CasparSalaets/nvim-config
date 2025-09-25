@@ -37,4 +37,4 @@ All plugins are managed using [vim-plug](https://github.com/junegunn/vim-plug).
 > ```shell
 > wsl --install
 > ```  
-> My Linux distro of choice is **Kali**, though any other should work just fine.
+> My Linux distro of choice is **Ubuntu**, though any other should work just fine.
