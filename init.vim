@@ -1,10 +1,11 @@
 :set number
 :set relativenumber
 :set autoindent
-:set tabstop=4
-:set shiftwidth=4
+:set smartindent
+:set tabstop=2
+:set shiftwidth=2
 :set smarttab
-:set softtabstop=4
+:set softtabstop=2
 :set mouse=a
 :set wildmenu
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -18,14 +19,17 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/itmammoth/doorboy.vim' " autoclose
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim' " Auto Completion
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'https://github.com/nvim-telescope/telescope-file-browser.nvim'
 Plug 'https://github.com/haishanh/night-owl.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 if has("termguicolors")
@@ -33,7 +37,8 @@ if has("termguicolors")
 endif
 
 syntax enable
-colorscheme night-owl
+colorscheme torte
+" colorscheme night-owl
 
 set guicursor=n-v-c:block
 
@@ -43,9 +48,42 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
 
-nmap <F9> :TerminalSplit bash<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+let mapleader = " "
+nnoremap <silent> <leader>ff :Telescope find_files<CR>
+
+" Smart indentation for braces
+inoremap {<CR> {<CR>}<Esc>O
+
+lua << EOF
+require("toggleterm").setup{
+  size = 20,
+  open_mapping = [[<C-n>]],   -- Press F9 to toggle terminal
+  hide_numbers = true,
+  shade_terminals = true,
+  start_in_insert = true,
+  insert_mappings = true,
+  terminal_mappings = true,
+  direction = "float",       -- Can be "horizontal", "vertical", "tab", or "float"
+  float_opts = {
+    border = "curved",
+    winblend = 3,
+  },
+}
+EOF
+
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
