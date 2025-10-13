@@ -88,7 +88,7 @@ sudo apt update && sudo apt install neovim -y
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/yourusername/nvim-config ~/.config/nvim
+   git clone https://github.com/casparsalaets/nvim-config ~/.config/nvim
    ```
 
 2. **Open Neovim:**
