@@ -6,6 +6,7 @@
 " Compatible with: Neovim (v0.5+)
 " =========================================================
 
+
 " ------------------------------
 " 🧭 General Settings
 " ------------------------------
@@ -22,7 +23,7 @@ set wildmenu                " Enhanced command-line completion
 set scrolloff=8             " Keep 8 lines visible above/below the cursor
 set guicursor=n-v-c:block   " Use block cursor in normal/visual/command modes
 set completeopt-=preview    " Disable preview window in autocomplete
-
+let mapleader = " "
 " Highlight extra whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -119,9 +120,15 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+nnoremap <leader>rr <Plug>(coc-rename)
+" Remap keys for applying code actions at the cursor position
+nnoremap <leader>ca  <Plug>(coc-codeaction-cursor)
+" Remap keys for apply code actions affect whole buffer
+nnoremap <leader>sa  <Plug>(coc-codeaction-source)
+" Apply the most preferred quickfix action to fix diagnostic on the current line
+nnoremap <leader>fc  <Plug>(coc-fix-current)	
 
 " --- Harpoon ---
-let mapleader = " "
 nnoremap <leader>a :lua require("harpoon.mark").add_file()<CR>
 nnoremap <leader>m :lua require("harpoon.ui").toggle_quick_menu()<CR>
 nnoremap <leader>1 :lua require("harpoon.ui").nav_file(1)<CR>
@@ -135,8 +142,8 @@ nnoremap <leader>r :lua require("harpoon.mark").rm_file()<CR>
 nnoremap <silent> <leader>ff :Telescope find_files<CR>
 
 " --- Doorboy (Auto Pairs) ---
-let g:doorboy_nomap_brackets = { '*': ['()', '[]'] }
-let g:doorboy_nomap_quotations = { '*': ["'", '"'] }
+let g:doorboy_nomap_brackets = { '*': ['()', '[]', '{}'] }
+let g:doorboy_nomap_quotations = { '*': ["'", '"', '`'] }
 
 " =========================================================
 " 🧠 Notes
