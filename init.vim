@@ -74,11 +74,14 @@ Plug 'akinsho/toggleterm.nvim', {'tag': '*'}
 " --- Themes ---
 Plug 'haishanh/night-owl.vim'
 
+Plug 'mbbill/undotree'
 call plug#end()
 
 " ------------------------------
 " 🧩 Plugin Configuration
 " ------------------------------
+
+nnoremap <F5> :UndotreeToggle<CR>
 
 " --- NERDTree ---
 let g:NERDTreeDirArrowExpandable = "+"
@@ -120,7 +123,7 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
-nnoremap <leader>rr <Plug>(coc-rename)
+nnoremap <leader>rn <Plug>(coc-rename)
 " Remap keys for applying code actions at the cursor position
 nnoremap <leader>ca  <Plug>(coc-codeaction-cursor)
 " Remap keys for apply code actions affect whole buffer
@@ -152,4 +155,5 @@ let g:doorboy_nomap_quotations = { '*': ["'", '"', '`'] }
 " • Nerd Fonts are needed for icons to display correctly.
 " • Works best in Neovim 0.8+ or later.
 " =========================================================
+
 
