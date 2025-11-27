@@ -1,5 +1,5 @@
 " =========================================================
-" 🌙 Neovim Configuration
+" Neovim Configuration
 " =========================================================
 " Author: Caspar Salaets 
 " Description: Clean, documented Neovim setup using vim-plug
@@ -8,7 +8,7 @@
 
 
 " ------------------------------
-" 🧭 General Settings
+" General Settings
 " ------------------------------
 set number                  " Show absolute line numbers
 set relativenumber          " Show relative line numbers
@@ -38,7 +38,7 @@ colorscheme torte
 " colorscheme night-owl  " Uncomment for alternative theme
 
 " ------------------------------
-" 🔌 Plugin Management
+" Plugin Management
 " ------------------------------
 " Plugin manager: vim-plug
 call plug#begin('~/.config/nvim/plugged')
@@ -78,7 +78,7 @@ Plug 'mbbill/undotree'
 call plug#end()
 
 " ------------------------------
-" 🧩 Plugin Configuration
+" Plugin Configuration
 " ------------------------------
 
 nnoremap <F5> :UndotreeToggle<CR>
@@ -149,7 +149,7 @@ let g:doorboy_nomap_brackets = { '*': ['()', '[]', '{}'] }
 let g:doorboy_nomap_quotations = { '*': ["'", '"', '`'] }
 
 " =========================================================
-" 🧠 Notes
+" Notes
 " =========================================================
 " • Requires Node.js, npm, and Python 3 for CoC.
 " • Nerd Fonts are needed for icons to display correctly.
