@@ -1,21 +1,21 @@
-# ⚙️ Neovim Configuration
+# Neovim Configuration
 
 A modern, lightweight, and extensible Neovim setup — built with **Vim compatibility** in mind and powered by **vim-plug**.  
 This configuration balances simplicity, speed, and functionality for everyday development.
 
 ---
 
-## 🧭 Overview
+## Overview
 
 This setup uses the classic `.vim` configuration syntax, ensuring compatibility with both **Vim** and **Neovim**.  
 Most plugins work seamlessly in both editors — with the exception of **CoC (Conquer of Completion)**, which requires Neovim-specific features.
 
-> 💡 **Tip:**  
+> **Tip:**  
 > To get the best experience, use Neovim **v0.8+** and install the required dependencies listed below.
 
 ---
 
-## 🔌 Plugin Management
+## Plugin Management
 
 All plugins are managed with [**vim-plug**](https://github.com/junegunn/vim-plug).
 
@@ -25,7 +25,7 @@ To install plugins after cloning this config, open Neovim and run:
 :PlugInstall
 ```
 
-### 📦 Installed Plugins
+### Installed Plugins
 
 | Category | Plugin | Description |
 |-----------|---------|-------------|
@@ -49,7 +49,7 @@ To install plugins after cloning this config, open Neovim and run:
 
 ---
 
-## 🧰 Features
+## Features
 
 ✅ **Relative line numbers** for efficient navigation  
 ✅ **Auto-completion** with [CoC](https://github.com/neoclide/coc.nvim)  
@@ -62,11 +62,11 @@ To install plugins after cloning this config, open Neovim and run:
 
 ---
 
-## 🖥️ Environment Setup
+## Environment Setup
 
 This configuration works across Linux, macOS, and Windows (via WSL).
 
-### 🐧 On WSL (Recommended)
+### On WSL (Recommended)
 
 I primarily use Neovim through the **Windows Subsystem for Linux (WSL)**.  
 To install WSL with Ubuntu:
@@ -83,7 +83,7 @@ sudo apt update && sudo apt install neovim -y
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. **Clone this repository:**
 
@@ -113,7 +113,7 @@ sudo apt update && sudo apt install neovim -y
 
 ---
 
-## 🔠 Fonts & Icons
+## Fonts & Icons
 
 Some plugins (like `vim-devicons` and `airline`) require a **Nerd Font** to display icons correctly.  
 You can download one here: [https://www.nerdfonts.com/](https://www.nerdfonts.com/)
@@ -125,7 +125,7 @@ Recommended fonts:
 
 ---
 
-## ⚡ Keybindings
+## Keybindings
 
 | Key | Action |
 |------|--------|
@@ -144,7 +144,7 @@ Recommended fonts:
 
 ---
 
-## 🧩 Dependencies
+## Dependencies
 
 To ensure all plugins work properly, install the following tools:
 
@@ -160,7 +160,7 @@ Then install CoC dependencies (inside Neovim):
 
 ---
 
-## 🎨 Theme Customization
+## Theme Customization
 
 You can easily switch between color schemes:
 
@@ -177,7 +177,7 @@ Explore more options under:
 
 ---
 
-## 🧠 Notes
+## Notes
 
 - Tested on **Neovim 0.9+**
 - Designed for **WSL Ubuntu**
